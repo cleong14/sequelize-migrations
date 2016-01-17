@@ -47,7 +47,7 @@ module.exports = function(sequelize, DataTypes) {
 };
 ```
 
-**migrations/<timestamp>-create-user.js**
+**migrations/{timestamp}-create-user.js**
 ```
 'use strict';
 module.exports = {
@@ -95,7 +95,7 @@ For a list of migration functions, see: http://sequelize.readthedocs.org/en/late
 Let's pretend you have jammed out 50 new commits while working with your newly created `Users` table, merged in your friends `Events`, and realize that you forgot to add in an `email` column to the table! Don't worry, this is not a problem.
 
 ```
-sequelize create:migration --name add-email-to-user
+sequelize migration:create --name add-email-to-user
 ```
 
 This time you run the command, it only generates a migration file for you. When you open it, you notice it's pretty bare!
